@@ -1,0 +1,20 @@
+<!-- <h1 [ngStyle] = "{backgroundColor : isOnline ? 'green' : 'red'}">Hello</h1>
+<h1 [ngClass] = "{status : isOnline}">World</h1>
+<p *ngFor="let server of servers">{{server}}</p>
+<p *ngFor="let server of serverList; let i=index">
+  {{i}}. {{server.name}} is {{server.status}}
+</p>
+<app-servers></app-servers> -->
+<!-- <div app-servers></div> -->
+<!-- <app-warningalert></app-warningalert>
+<app-successalert></app-successalert> -->
+
+<p *ngIf="isShow">This is detail.</p>
+<button type="button" class="btn-sm btn-success" (click) = "show()">Show Detail</button>
+
+<p *ngFor="let log of logs;let i=index" [ngStyle]="{backgroundColor : i + 1 >= 5 ? 'red' : ''}" [ngClass]="{color : i + 1 >= 5}">
+  {{i + 1}}. {{log}}
+</p>
+
+<app-servers></app-servers>
+

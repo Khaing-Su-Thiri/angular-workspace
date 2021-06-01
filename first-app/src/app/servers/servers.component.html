@@ -1,0 +1,19 @@
+<!-- <app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onAddServer()">Add Server</button>
+
+<p>{{serverCreationStatus}}</p>
+
+<input type="text" [(ngModel)]="serverName" class="form-control"> -->
+
+<!-- <p>{{serverName}}</p> -->
+
+<!-- <input type="text"  [(ngModel)]="username" class="form-control mt-3" placeholder="username">
+<p>{{username}}</p>
+<input type="button" value="Reset" [disabled]="!username" (click)="reset()"> -->
+
+<app-server *ngFor="let server of servers" [serverData]="server" [color]="backgroundColor" desc="This is description." [abc]="hello" (statusChanged)="onStatusChange($event)"></app-server>
+<h1 *ngFor="let log of logs">{{log}}</h1>
