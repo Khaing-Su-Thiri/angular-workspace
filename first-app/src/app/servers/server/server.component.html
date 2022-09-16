@@ -1,0 +1,22 @@
+<!-- <p *ngIf="showStatus; else elseBlock">Server is online.</p>
+
+<ng-template #elseBlock>
+  <p>No status available!</p>
+</ng-template> -->
+
+<!-- <p [ngStyle]="{backgroundColor : color}">{{serverData.name}} is {{serverData.status}}</p>
+<h1>{{desc}}</h1>
+<h1>Hello</h1>
+
+<button class="btn btn-primary" (click)="toggleStatus()">Change Status</button>
+
+<button class="btn btn-primary" (click)="sendHello()">Send</button>
+
+<button class="btn btn-secondary" (click)="increaseCount()">Increase Count</button>
+<p>{{'Count in child: ' + count}}</p> -->
+
+<p>Server Id : {{ server.id }}</p>
+<p>Server Name : {{ server.name }}</p>
+<p>Server Status : {{ server.status }}</p>
+
+<button class="btn btn-primary" (click)="onEdit()">Edit</button>

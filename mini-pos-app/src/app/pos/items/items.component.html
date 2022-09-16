@@ -1,0 +1,9 @@
+<div class="row g-3 overflow-auto scroll-hide p-2" style="height: 80vh;
+border: 1px solid #ff007b38;
+border-radius: 5px;">
+  <div *ngFor="let item of items" class="col-3">
+    <app-item [item]="item" (click)="addToCart(item)"></app-item>
+  </div>
+</div>
+
+

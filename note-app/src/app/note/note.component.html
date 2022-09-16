@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col"><span>{{noteData.title}}</span></div>
+      <div class="col text-end">
+        <i class="bi bi-trash-fill" (click)="deleteNote()"></i>
+        <i class="bi bi-pencil-square" (click)="editNote()"></i>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{noteData.body}}</p>
+  </div>
+</div>

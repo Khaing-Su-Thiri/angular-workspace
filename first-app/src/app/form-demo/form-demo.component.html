@@ -1,0 +1,56 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label>Username</label>
+    <input
+      type="text"
+      class="form-control"
+      ngModel
+      name="username"
+      required
+      #username="ngModel"
+    />
+    <span class="form-text" *ngIf="username.invalid && username.touched"
+      >Please enter a username!</span
+    >
+  </div>
+  <br />
+  <div class="form-group">
+    <label>Email</label>
+    <input
+      type="email"
+      class="form-control"
+      ngModel
+      name="email"
+      required
+      email
+      #email="ngModel"
+    />
+    <span class="form-text" *ngIf="email.invalid && email.touched"
+      >Please enter a email!</span
+    >
+  </div>
+  <br />
+  <div class="form-group">
+    <label>Secret Questions</label>
+    <select class="form-control" name="secret" [ngModel]="defaultSecret">
+      <option value="pet">Your first pet?</option>
+      <option value="teacher">Your first teacher?</option>
+    </select>
+  </div>
+  <br />
+  <div class="radio" *ngFor="let gender of genders">
+    <label>
+      <input
+        type="radio"
+        name="gender"
+        [value]="gender"
+        [ngModel]="defaultGender"
+      />
+      {{ gender }}
+    </label>
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+    Submit
+  </button>
+</form>

@@ -1,0 +1,23 @@
+<div class="col">
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      <div class="row">
+        <div class="col"><span>Your Note</span></div>
+        <div class="col text-end">
+          <i class="bi bi-check-lg me-3" (click)="addNote()"></i>
+          <i class="bi bi-x-lg" (click)="cancelNote()"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="email" class="form-control" [(ngModel)]="note.title" id="exampleFormControlInput1" placeholder="Add Title">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Body</label>
+        <textarea class="form-control" [(ngModel)]="note.body" id="exampleFormControlTextarea1" rows="10" placeholder="Type Here ..."></textarea>
+      </div>
+    </div>
+  </div>
+</div>

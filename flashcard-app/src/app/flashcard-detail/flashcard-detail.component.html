@@ -1,0 +1,10 @@
+<div *ngIf="isShowAddButton" (click)="changePlaymode()" class="text-end"><i class="bi bi-play-btn-fill fs-3" style="cursor: pointer;"></i></div>
+<div class="card" *ngFor="let flashcard of flashcards">
+  <div class="card-body">
+    <p *ngIf="!flashcard.isEditMode" (dblclick)="updateCard(flashcard)">{{flashcard.term}}</p>
+    <input *ngIf="flashcard.isNew() || flashcard.isEditMode" (dblclick)="updateCard(flashcard)" placeholder="Enter term" type="text" class="form-control form-control-sm" [(ngModel)]="flashcard.term">
+    <p *ngIf="!flashcard.isEditMode" (dblclick)="updateCard(flashcard)">{{flashcard.definition}}</p>
+    <input *ngIf="flashcard.isNew() || flashcard.isEditMode" (dblclick)="updateCard(flashcard)" placeholder="Enter definition" type="text" class="form-control form-control-sm" [(ngModel)]="flashcard.definition">
+  </div>
+</div>
+<a *ngIf="isShowAddButton" class="card-link text-decoration-none" (click)="addCard()">Add Flashcard ...</a>

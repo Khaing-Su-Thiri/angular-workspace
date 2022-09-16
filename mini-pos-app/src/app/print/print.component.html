@@ -1,0 +1,38 @@
+<div class="container">
+  <h3>Pont POS</h3>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of result.items;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <table class="table table-borderless">
+    <tr>
+      <td class="fw-bold text-end">Total: </td>
+      <td>{{result.totalPrice}} Ks</td>
+    </tr>
+    <tr>
+      <td class="fw-bold text-end">Paid: </td>
+      <td>{{result.paid}} Ks</td>
+    </tr>
+    <tr>
+      <td class="fw-bold text-end">Changed: </td>
+      <td>{{result.changed}} Ks</td>
+    </tr>
+  </table>
+</div>

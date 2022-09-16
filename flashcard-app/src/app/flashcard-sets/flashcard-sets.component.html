@@ -1,0 +1,8 @@
+<ul class="list-group mt-2">
+  <li class="list-group-item" #li (click)="selectCard(li, flashcardSet)" aria-current="true" *ngFor="let flashcardSet of flashcardSets">
+    <p *ngIf="!flashcardSet.isEditMode" (dblclick)="updateSet(flashcardSet)">{{flashcardSet.name}}</p>
+    <input *ngIf="flashcardSet.isNew() || flashcardSet.isEditMode" (dblclick)="updateSet(flashcardSet)" placeholder="Enter name" type="text" class="form-control form-control-sm" [(ngModel)]="flashcardSet.name">
+    <p *ngIf="!flashcardSet.isEditMode" (dblclick)="updateSet(flashcardSet)">{{flashcardSet.description}}</p>
+    <input *ngIf="flashcardSet.isNew() || flashcardSet.isEditMode" (dblclick)="updateSet(flashcardSet)" placeholder="Enter description" type="text" class="form-control form-control-sm" [(ngModel)]="flashcardSet.description">
+  </li>
+</ul>

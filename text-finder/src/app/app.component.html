@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Find some text ...."
+        [(ngModel)]="searchTerms"
+      />
+    </div>
+    <div class="col-6">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+          [(ngModel)]="isCaseSensitive"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Case Sensitive
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class="mt-4" appTextHighlight="pink" [searchTerms]="searchTerms" [isCaseSensitive]="isCaseSensitive">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc simile
+        tandem est? Hic ambiguo ludimur. Urgent tamen et nihil remittunt. Iam
+        contemni non poteris. Et quod est munus, quod opus sapientiae? Duo
+        Reges: constructio interrete. Sed quod proximum fuit non vidit. Quonam,
+        inquit, modo? Erat enim res aperta. Efficiens dici potest. Igitur ne
+        dolorem quidem. Tamen a proposito, inquam, aberramus. Ergo, inquit, tibi
+        Q. Optime, inquam. Quid autem habent admirationis, cum prope accesseris?
+        Videsne, ut haec concinant? Prioris generis est docilitas, memoria;
+        Quicquid porro animo cernimus, id omne oritur a sensibus; Res enim
+        concurrent contrariae. Cave putes quicquam esse verius. Mihi enim satis
+        est, ipsis non satis. Negare non possum.
+      </p>
+    </div>
+  </div>
+</div>

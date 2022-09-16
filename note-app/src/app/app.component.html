@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-md" (click)="openForm()" style="background: #e87e90;">Add +</button>
+      <div class="row mt-5">
+        <div class="col-3 mb-5" *ngFor="let note of notes">
+          <app-note *ngIf="!note.isEdit" [noteData]="note" (formEdited)="onFormEdited($event)" (formDeleted)="onFormDeleted($event)"></app-note>
+          <app-note-edit *ngIf="note.isEdit" (formCanceled)="onFormCanceled($event)" (formSaved)="onFormSaved($event)" [noteData]="note"></app-note-edit>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

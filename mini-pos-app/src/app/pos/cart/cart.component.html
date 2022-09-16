@@ -1,0 +1,46 @@
+<div>
+  <h2>Cart <i class="bi bi-cart4" style="color: #ff007b;"></i></h2>
+  <hr>
+  <div>
+    <ul class="list-group overflow-auto scroll-hide" style="height: 40vh;">
+      <li class="list-group-item" *ngFor="let item of items; let i = index">
+        <div class="row">
+          <div class="col-1 fw-bold">{{i + 1}}.</div>
+          <div class="col-6">
+            <div class="fw-bold">{{item.name}}</div>
+          </div>
+          <div class="col-5 text-end">
+            <span class="badge rounded-pill badge-color">{{item.quantity}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+          </div>
+          <div class="col-6">
+            <span style="font-size: small;">{{item.price}} Ks</span>
+          </div>
+          <div class="col-5 text-end">
+            <i class="bi bi-plus-circle-fill i-style" (click)="addItem(item)"></i>
+            <i class="bi bi-dash-circle-fill i-style" (click)="removeItem(item)"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col"><p class="fw-bold">Total:</p></div>
+    <div class="col text-end"><span>{{totalPrice}} Ks</span></div>
+  </div>
+  <div class="row">
+    <div class="col"><p class="fw-bold">Paid:</p></div>
+    <div class="col text-end"><input type="number" class="form-control form-control-sm" [(ngModel)]="paid"></div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col"><p class="fw-bold">Changed:</p></div>
+    <div class="col text-end">{{paid ? paid - totalPrice : 0}} Ks</div>
+  </div>
+  <button class="btn btn-sm badge-color w-100" style="color: whitesmoke;" (click)="print()">Print</button>
+</div>

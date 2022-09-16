@@ -14,6 +14,35 @@
 <!-- <input type="text"  [(ngModel)]="username" class="form-control mt-3" placeholder="username">
 <p>{{username}}</p>
 <input type="button" value="Reset" [disabled]="!username" (click)="reset()"> -->
-
-<app-server *ngFor="let server of servers" [serverData]="server" [color]="backgroundColor" desc="This is description." [abc]="hello" (statusChanged)="onStatusChange($event)"></app-server>
+<!-- <p>{{'Count in parent: ' + count}}</p>
+<app-server *ngFor="let server of servers" [serverData]="server" [color]="backgroundColor" desc="This is description." [abc]="hello" (statusChanged)="onStatusChange($event)" (greet)="onGreet($event)" [count] = "count" (countChange)="count = $event"></app-server>
 <h1 *ngFor="let log of logs">{{log}}</h1>
+
+<button class="btn btn-info btn-sm" (click)="click()">Click</button> -->
+<!--
+<h1>This is servers.</h1>
+<ng-content></ng-content>
+<p>{{test}}</p> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let server of servers"
+          [routerLink]="['/servers', server.id]"
+          [queryParams]="{ allowEdit: server.id === 3 ? '1' : '0' }"
+          fragment="loading"
+        >
+          {{ server.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <router-outlet></router-outlet>
+      <!-- <app-server></app-server>
+      <app-server-edit></app-server-edit> -->
+    </div>
+  </div>
+</div>

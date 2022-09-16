@@ -9,12 +9,95 @@
 <!-- <app-warningalert></app-warningalert>
 <app-successalert></app-successalert> -->
 
-<p *ngIf="isShow">This is detail.</p>
+<!-- <p *ngIf="isShow">This is detail.</p>
 <button type="button" class="btn-sm btn-success" (click) = "show()">Show Detail</button>
 
+<app-servers (clickAlert)=onClickEvent($event)></app-servers>
 <p *ngFor="let log of logs;let i=index" [ngStyle]="{backgroundColor : i + 1 >= 5 ? 'red' : ''}" [ngClass]="{color : i + 1 >= 5}">
   {{i + 1}}. {{log}}
 </p>
 
-<app-servers></app-servers>
+<h1>This is App.</h1> -->
 
+<!-- <div class="container mt-5">
+  <div class="row">
+    <div class="col"> -->
+<!-- <input type="text" class="form-control mb-2" #usernameInput>
+      <button class="btn btn-primary" (click)="addUser()">Add User</button>
+      <hr>
+      <p>{{greet}}</p> -->
+<!-- <app-game-control (numberChanged)="onNumberChanged($event)" (numberStopped)="onNumberStopped($event)"></app-game-control>
+      <div *ngFor="let res of results">
+        <app-even *ngIf="res % 2 == 0" [number]="res"></app-even>
+        <app-odd *ngIf="res % 2 != 0" [number]="res"></app-odd>
+      </div>
+      <p [ngStyle]="{color : isEven ? 'pink' : 'cyan'}">{{message}}</p> -->
+<!--
+      <p appBasicHighlight>Hello</p>
+      <p appBetterHighlight="cyan">Hello</p> -->
+<!-- <ng-template [ngIf]="isShow">
+        <p>This is text</p>
+      </ng-template> -->
+
+<!-- <p *appUnless="isShow">
+        <span>This is text</span>
+        <span>This is text</span>
+        <span>This is text</span>
+      </p>
+
+      <div [ngSwitch]="value">
+        <span *ngSwitchCase="10">Value is 10</span>
+        <span *ngSwitchCase="20">Value is 20</span>
+        <span *ngSwitchDefault>Value is {{value}}</span>
+      </div>
+
+      <div *ngFor="let status of statuses">
+        Server is <span [appServerStatus]="status">{{status}}</span>
+      </div>
+
+      <hr>
+      <button class="btn btn-primary btn-sm" (click)="isShow = !isShow">Toggle Status</button>
+      <p *appServerTotal="isShow">Server is {{statuses.length}}</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- <app-servers>
+  <h1 #test>Hello World</h1>
+</app-servers> -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <!-- <app-form-demo></app-form-demo> -->
+      <app-reactive-form-demo></app-reactive-form-demo>
+      <!-- <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="servers"
+            >Servers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['users']"
+            >Users</a
+          >
+        </li>
+      </ul> -->
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+      <app-home></app-home>
+      <app-servers></app-servers>
+      <app-users></app-users>
+    </div>
+  </div> -->
+
+  <!-- <h1 *ngIf="isActivated">Activated!</h1> -->
+</div>

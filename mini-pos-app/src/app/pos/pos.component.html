@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light mb-5 sticky-top" style="background: #f4758b;">
+  <div>
+    <span class="navbar-brand mb-0 h1 p-3" style="color: white;">Pont POS</span>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <app-items (itemClicked)="onItemClicked($event)"></app-items>
+    </div>
+    <div class="col-4">
+      <app-cart [items]="selectedItems" (resultGot)="onResultGot($event)"></app-cart>
+    </div>
+  </div>
+</div>

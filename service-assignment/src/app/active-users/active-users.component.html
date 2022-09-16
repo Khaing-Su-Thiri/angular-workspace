@@ -1,0 +1,6 @@
+<h1>Active Users ({{activeUsers.length}})</h1>
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let user of activeUsers">{{user}}
+    <button class="btn btn-sm btn-warning" (click)="changeStatus('active', user)">Inactive</button>
+  </li>
+</ul>

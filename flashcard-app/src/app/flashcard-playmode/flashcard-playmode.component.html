@@ -1,0 +1,24 @@
+<div class="w-600">
+  <div class="text-end" (click)="changePlaymode()">
+    <i class="bi bi-stop-btn-fill fs-3" style="cursor: pointer;"></i>
+  </div>
+  <div class="progress mb-3">
+    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [ngStyle]="{width: percentage + '%'}"></div>
+  </div>
+  <article class="flashcard">
+    <input id="flashcard" type="checkbox"/>
+    <label for="flashcard">
+      <section class="front">{{flashcard.term}}</section>
+      <section class="back">{{flashcard.definition}}</section>
+    </label>
+  </article>
+  <div class="mt-3 d-flex justify-content-evenly">
+    <button class="btn btn-danger" (click)="countCard('wrong')">Wrong</button>
+    <button class="btn btn-success" (click)="countCard('correct')">Correct</button>
+  </div>
+</div>
+
+<div *ngIf="isShowResult" class="alert alert-success mt-3" role="alert">
+  Wrong : {{wrongCount}}
+  Correct : {{correctCount}}
+</div>
